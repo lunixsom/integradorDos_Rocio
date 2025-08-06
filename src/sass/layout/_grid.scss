@@ -1,0 +1,27 @@
+.grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(12, 1fr);
+
+  .card {
+    grid-column: span 3;
+  }
+
+  // Tablet: 2 columnas
+  @media (max-width: map-get($grid-width, sm)) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card {
+      grid-column: span 1;
+    }
+  }
+
+  // Celular: 1 columna
+  @media (max-width: map-get($grid-width, xs)) {
+    grid-template-columns: 1fr;
+
+    .card {
+      grid-column: span 1;
+    }
+  }
+}

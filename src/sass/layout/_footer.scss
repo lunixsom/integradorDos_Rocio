@@ -1,0 +1,72 @@
+.footer__container {
+  background-color: $primary-color;
+  padding: 0.8rem 0.5rem;
+  margin: 30px;
+  border-radius: 3rem;
+  border: 8px solid $strong-primary-color;
+  box-shadow: $box-shadow-4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 150px;
+}
+
+.footer__wrapp {
+  position: relative;
+  color: $white-color;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid $white-color;
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+
+  &:hover {
+    color: $light-secondary-color;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+.footer__socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer__socialmedia-links {
+  color: $white-color;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    animation: bounce 0.5s ease infinite;
+    color: $light-primary-color;
+  }
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

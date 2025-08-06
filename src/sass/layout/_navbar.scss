@@ -1,0 +1,138 @@
+.navbar_container {
+  position: relative;
+  background-color: $navbar-bg-color;
+  padding: 1.5rem 3rem;
+  border: 6px double $strong-primary-color;
+  box-shadow: $box-shadow-4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar_content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.menu-toggle {
+  z-index: 1;
+  font-size: 2.5rem;
+  background: none;
+  border-radius: 8px;
+  color: $white-color;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    color: $light-secondary-color;
+    animation: fa-bounce 1s infinite; 
+  }
+
+  &:not(:hover) {
+    animation: none; 
+  }
+
+  &:hover {
+    color: $light-secondary-color;
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+
+.navbar_content h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white-color;
+  margin: 0;
+  font-size: 2.5rem;
+  border-bottom: 3px solid $white-color;
+  padding-bottom: 0.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: $light-secondary-color;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+.navbar_options {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar_options ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_options li {
+  font-size: 1.2rem;
+}
+
+.navbar_options a {
+  color: $white-color;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $light-secondary-color;
+  }
+
+  &:active {
+    color: $primary-color;
+  }
+}
+
+@media (max-width: map-get($gridbreakpoints, sm)) {
+  .navbar_container {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar_content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    h1 {
+      position: static;
+      transform: none;
+      text-align: center;
+      font-size: 2rem;
+      transform-origin: center;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+    .navbar_options {
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .navbar_options ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  }

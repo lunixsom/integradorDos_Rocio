@@ -1,0 +1,38 @@
+@mixin create-container-width() {
+  @each $bp, $w in $gridbreakpoints {
+    @media (min-width: $w) {
+      .container {
+        max-width: map-get($grid-width, $bp);  // Usar el breakpoint correspondiente para el max-width
+        margin: 0 auto; // Centra el contenedor
+      }
+    }
+  }
+}
+
+
+@mixin align-items ($align, $direction) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+}
+
+@mixin square ($size, $radius) {
+    height: $size;
+    width: $size;
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
+
+@mixin respond-to ($resolution) {
+    @if $resolution == mobile {
+        @media (max-width: 860px) {
+            @content;
+        }
+    }
+    @if $resolution == desktop {
+        @media (min-width: 860px) {
+            @content;
+        }
+    } 
+}
