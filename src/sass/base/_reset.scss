@@ -1,8 +1,9 @@
-@import "../utils/mixins";
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
  
 body {
     font-family: "Cal Sans", sans-serif;
-    background-color: $body-bg-color;
+    background-color: green;
     margin: 20px;
     color: rgb(255, 255, 255);
     text-decoration: none;

@@ -1,3 +1,7 @@
+@use "../utils/variables" as *;
+
+@use "sass:map";
+
 .card {
   display: flex;
   flex-direction: column;
@@ -32,7 +36,7 @@
 }
 
 // Medios de pantalla
-@media (max-width: map-get($gridbreakpoints, md)) and (min-width: map-get($gridbreakpoints, sm)) {
+@media (max-width: map.get($gridbreakpoints, md)) and (min-width: map.get($gridbreakpoints, sm)) {
   .card {
     flex-direction: row;
     align-items: center;
@@ -50,7 +54,7 @@
   }
 }
 
-@media (max-width: map-get($gridbreakpoints, sm)) {
+@media (max-width: map.get($gridbreakpoints, sm)) {
   .card {
     margin: 0 10px;
     flex-direction: column;

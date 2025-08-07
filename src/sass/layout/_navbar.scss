@@ -1,3 +1,7 @@
+@use "../utils/variables" as *;
+
+@use "sass:map";
+
 .navbar_container {
   position: relative;
   background-color: $navbar-bg-color;
@@ -102,7 +106,7 @@
   }
 }
 
-@media (max-width: map-get($gridbreakpoints, sm)) {
+@media (max-width: map.get($gridbreakpoints, sm)) {
   .navbar_container {
     padding: 1rem 1.5rem;
   }

@@ -1,26 +1,26 @@
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/helpers";
+@use "utils/variables";
+@use "utils/mixins";
+@use "utils/helpers";
 
 
-@import "base/typography";
-@import "base/reset";
+@use "base/typography";
+@use "base/reset";
 
 
-@import "layout/header";
-@import "layout/grid";
-@import "layout/footer";
-@import "layout/navbar";
-@import "layout/menu";
+@use "layout/header";
+@use "layout/grid";
+@use "layout/footer";
+@use "layout/navbar";
+@use "layout/menu";
 
-@import "components/buttons";
-@import "components/cards";
-@import "components/form";
+@use "components/buttons";
+@use "components/cards";
+@use "components/form";
 
-@import "pages/home";
-@import "pages/about-us";
-@import "pages/contact";
-@import "pages/alta";
+@use "pages/home";
+@use "pages/about-us";
+@use "pages/contact";
+@use "pages/alta";
 
 
 
