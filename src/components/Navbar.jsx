@@ -1,3 +1,5 @@
+import { NavLink, useNavigate } from "react-router-dom"
+
 function Navbar() {
     const navigate = useNavigate()
     return (
@@ -6,14 +8,14 @@ function Navbar() {
                 <button class="menu-toggle" aria-label="Abrir menú">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <h1 class="animated-title">SHINY</h1>
+                <h1 class="animated-title" onClick={() => navigate("/")}>SHINY</h1>
             </div>
 
             <div class="navbar_options">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">Sobre Nosotros</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <NavLink to="/pages/Home">Home</NavLink>
+                    <NavLink to="/about-us.html">Sobre Nosotros</NavLink>
+                    <NavLink to="contact.html">Contacto</NavLink>
                 </ul>
             </div>
         </header>

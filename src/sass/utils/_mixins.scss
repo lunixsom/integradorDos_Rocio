@@ -1,8 +1,10 @@
+@use "sass:map";
+
 @mixin create-container-width() {
   @each $bp, $w in $gridbreakpoints {
     @media (min-width: $w) {
       .container {
-        max-width: map-get($grid-width, $bp);  // Usar el breakpoint correspondiente para el max-width
+        max-width: map.get($grid-width, $bp);  // Usar el breakpoint correspondiente para el max-width
         margin: 0 auto; // Centra el contenedor
       }
     }

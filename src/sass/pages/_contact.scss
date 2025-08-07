@@ -1,3 +1,5 @@
+@use "../utils/variables" as *;
+
 .contact-page {
 
   .card {
@@ -59,7 +61,7 @@
 
           &.with-error {
             border-color: $error-color;
-            background-color: lighten($error-color, 40%);
+            background-color: grey
           }
 
           &:focus {

@@ -1,4 +1,7 @@
-.grid {
+@use "sass:map";
+@use "../utils/variables" as *;
+
+.grid{
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(12, 1fr);
@@ -8,7 +11,7 @@
   }
 
   // Tablet: 2 columnas
-  @media (max-width: map-get($grid-width, sm)) {
+  @media (max-width: map.get($grid-width, sm)) {
     grid-template-columns: repeat(2, 1fr);
 
     .card {
@@ -17,7 +20,7 @@
   }
 
   // Celular: 1 columna
-  @media (max-width: map-get($grid-width, xs)) {
+  @media (max-width: map.get($grid-width, xs)) {
     grid-template-columns: 1fr;
 
     .card {
