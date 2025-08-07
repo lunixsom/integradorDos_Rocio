@@ -13,9 +13,9 @@ function Navbar() {
 
             <div class="navbar_options">
                 <ul>
-                    <NavLink to="/pages/Home">Home</NavLink>
-                    <NavLink to="/about-us.html">Sobre Nosotros</NavLink>
-                    <NavLink to="contact.html">Contacto</NavLink>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/about">Sobre Nosotros</NavLink>
+                    <NavLink to="/contact">Contacto</NavLink>
                 </ul>
             </div>
         </header>
