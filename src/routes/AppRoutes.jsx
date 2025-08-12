@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Layout from '../layouts/Layout'
+import Alta from '../pages/Alta'
 
 export const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ export const AppRoutes = () => {
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/alta" element={<Alta />} />
         </Route>
       </Routes>
     </BrowserRouter>
